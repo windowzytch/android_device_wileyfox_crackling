@@ -26,6 +26,8 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
+# Build broken DUP rules to avoid unnecessary errors while building
+BUILD_BROKEN_DUP_RULES := true
 # Camera
 BOARD_CAMERA_SENSORS := s5k5e2_olq5f19 s5k3m2_olqba20
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \

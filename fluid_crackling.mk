@@ -1,5 +1,4 @@
-# Copyright (C) 2015 The CyanogenMod Project
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2019 Project Fluid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,13 +14,18 @@
 
 $(call inherit-product, device/wileyfox/crackling/full_crackling.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
+# Inherit some common Project Fluid stuff.
+$(call inherit-product, vendor/fluid/config/common_mini_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := lineage_crackling
+# Maintainer stuff
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.fluid.maintainer=Wind/owZ \
+  ro.fluid.cpu=MSM8916
+
+PRODUCT_NAME := fluid_crackling
 BOARD_VENDOR := wileyfox
 PRODUCT_DEVICE := crackling
 
